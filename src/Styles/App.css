@@ -1,0 +1,139 @@
+#root {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 1rem;
+    text-align: center;
+    font-family: georgia, "Times New Roman", Times, serif;
+}
+
+#list-title {
+    text-shadow: 2px 2px 1px rgba(0, 255, 211, 0.4);
+}
+
+.add-task-btn{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 5rem;
+    height: 3rem;
+    background: rgba(8, 237, 126, 0.5);
+    border: none;
+    border-radius: .3rem;
+}
+.add-task-btn:hover{
+    background: rgba(99, 251, 181, 0.5);
+    color: #191919;
+}
+
+.add-task-form {
+    z-index: 1001;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 500px;
+}
+.modal {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 500px;
+}
+
+.form-group label{
+    display: block;
+    margin-top: 1rem;
+}
+
+.form-group textarea{
+    width: 80%;
+    height: 5rem;
+    resize: vertical;
+}
+
+.form-group select {
+    width: 70%;
+    height: 2rem;
+}
+
+.form-control{
+    width: 30%;
+    font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.form-actions{
+    display: flex;
+    justify-content: flex-end;
+    align-content: space-between;
+    gap: 1rem;
+    margin: 1rem;
+}
+
+.tasks-list {
+    padding: 1rem;
+}
+
+.task-meta{
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+}
+.task-meta span{
+    margin: 1rem;
+    padding: 0.5rem;
+}
+
+.task-item {
+    background: #fbfafa;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; 
+}
+.task-item.Done{
+    border-left: 1rem solid #02fb02;
+}
+.task-item.Pending{
+    border-left: 1rem solid #fbef02;
+}
+.task-item.In-Progress{
+    border-left: 1rem solid #0293fb;
+}
+
+.Done span{
+    color: #15d311;
+    background: #e2f1e2;
+}
+.Pending span{
+    color: #ffc600;
+    background: #f6edda;
+}
+.In-Progress span{
+    color: #00d0ff;
+    background: #deedef;
+}
+
+.Done span:hover{
+    background: #ddf8dd;
+}
+
+.Pending span:hover{
+    background: #f4e9ce;
+
+}
+.In-Progress span:hover{
+    background: #d5ecf4;
+}
