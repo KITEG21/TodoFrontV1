@@ -3,11 +3,19 @@
     margin: 0 auto;
     padding: 1rem;
     text-align: center;
-    font-family: georgia, "Times New Roman", Times, serif;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
 }
 
 #list-title {
     text-shadow: 2px 2px 1px rgba(0, 255, 211, 0.4);
+}
+
+h3 {
+    font-size: 2rem;
+    color: #191919;
+    text-shadow: 2px 2px 1px rgba(1, 17, 14, 0.4);
+    font-weight: lighter;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
 }
 
 .add-task-btn{
@@ -70,7 +78,20 @@
     margin: 1rem;
 }
 
-.tasks-list {
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; 
+}
+
+.tasks-list{
     padding: 1rem;
 }
 
@@ -91,27 +112,33 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5); 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000; 
+.task-item.dark-item {
+    background: #444;
+    color: #fff;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
 .task-item.Done{
+    border-left: 1rem solid #02fb02;
+}
+.task-item.Done.dark-item{
     border-left: 1rem solid #02fb02;
 }
 .task-item.Pending{
     border-left: 1rem solid #fbef02;
 }
+.task-item.Pending.dark-item{
+    border-left: 1rem solid #fbef02;
+}
 .task-item.In-Progress{
     border-left: 1rem solid #0293fb;
 }
+.task-item.In-Progress.dark-item{
+    border-left: 1rem solid #0293fb;
+}
+
 
 .Done span{
     color: #15d311;
@@ -137,3 +164,46 @@
 .In-Progress span:hover{
     background: #d5ecf4;
 }
+
+.delete-btn{
+    width: 5rem;
+    background: #ff0000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    margin-bottom: .3rem;
+}
+.delete-btn:hover{
+    background: #ff4d4d;
+}
+
+.change-theme{
+    position: absolute;
+    display: flex;
+    right: 5rem;
+    top: 3rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+.add-task-form.default {
+    background: #fff;
+    color: #000;
+    border: 1px solid #ccc;
+}
+
+.add-task-form.styled {
+    background: #f0f8ff;
+    color: #333;
+    border: 2px solid #007bff;
+}
+
+.tasks-list.dark {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+}
+  
+  
